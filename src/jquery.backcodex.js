@@ -118,6 +118,20 @@
             index++;
         })
 
-    };   
+    }; 
+
+    /* PUBLIC METHODS
+     * ========================= */
+    Backcodex.prototype = {
+
+     destroy: function (preserveBackground) {
+
+        // Remove Backcodex
+        if(!preserveBackground) {
+          this.$wrap.remove();          
+        }
+        this.$container.removeData('backcodex');
+      } 
+    }   
 
 })(jQuery);
